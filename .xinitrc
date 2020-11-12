@@ -10,6 +10,8 @@ picom &
 nitrogen --restore
 
 #set statusbar
+xbacklight -set 70
+amixer set Master 60%
 while true
 do
 #	BA=`acpi | cut -d' ' -f4`

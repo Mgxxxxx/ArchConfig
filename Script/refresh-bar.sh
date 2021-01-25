@@ -1,7 +1,6 @@
 #!/bin/bash
 
-BA=`acpi | cut -d' ' -f4`
-DA=`date '+%a %D %H:%M'`
+BA=`acpi | cut -d' ' -f4 | cut -d',' -f1`
+DA=`date +"%F %R"`
 SO=`amixer get Master | sed -n '$p' | cut -d] -f1 | cut -d[ -f2`
-LI=`xbacklight -get`
-xsetroot -name "Vol:${SO}|Bal:${LI}%|Bat:${BA}|${DA}"
+xsetroot -name "Vol:${SO}|Bat:${BA}|${DA}"

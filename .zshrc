@@ -81,7 +81,8 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LC_all=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -108,3 +109,4 @@ alias dc="sudo dhcpcd &"
 alias ra="ranger"
 alias sc="screenfetch"
 alias x="startx"
+alias sb="sudo vi /sys/class/backlight/amdgpu_bl0/brightness"

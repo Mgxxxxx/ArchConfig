@@ -2,6 +2,7 @@
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
+fcitx &
 
 #nitrogen
 nitrogen --restore
@@ -9,8 +10,11 @@ nitrogen --restore
 #picom
 picom &
 
-#fcitx
-fcitx &
+#禁用触摸板
+xinput disable 14
+
+#挂载windows
+#sudo mount /dev/nvme0n1p3 /mnt/win
 
 #BA=`acpi | cut -d' ' -f4 | cut -d',' -f1`
 #SO=`amixer get Master | sed -n '$p' | cut -d']' -f1 | cut -d'[' -f2`

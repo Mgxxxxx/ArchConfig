@@ -1,0 +1,39 @@
+colorscheme delek
+syntax on
+
+filetype on
+filetype indent on
+filetype plugin on
+filetype plugin indent on
+
+set wrap
+set number
+set relativenumber
+set tabstop=2
+set shiftwidth=2
+set autoindent
+set ruler
+set cul
+set showmode
+set cursorline
+set showmatch
+set incsearch
+set showcmd
+set nocompatible
+set mouse=a
+set encoding=utf-8
+set backspace=indent,eol,start
+set foldmethod=indent
+set foldlevel=99
+
+inoremap jj <Esc>
+map S :w<CR>
+map Q :q<CR>
+map tt :NERDTreeToggle<CR>
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'vim-airline/vim-airline'
+Plug 'preservim/nerdtree'
+
+call plug#end()
